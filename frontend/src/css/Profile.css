@@ -1,0 +1,39 @@
+.profile {
+    font-family: 'Dosis', sans-serif
+}
+
+.edit-icon {
+    position: absolute;
+    opacity: 0;
+}
+
+.profile-desc:hover {
+    opacity: 0.3;
+}
+
+.profile-desc:hover+.edit-icon {
+    transition: 0.4s;
+    font-size: 30px;
+    opacity: 1;
+}
+
+.close-button {
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    color: aliceblue;
+    font-size: 10vh;
+}
+
+.view-post {
+    z-index: 400;
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    height: 100vh;
+    width: 100%;
+
+}

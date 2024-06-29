@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Kalam:wght@700&display=swap');
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b718b7;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.modal-open .modal-backdrop {
+    z-index: -1;
+
+}
+
+.modal {
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (min-width: 900px) {
+    .profile {
+        font-size: 24px;
+    }
+
+    .smallDevice {
+        display: none;
+    }
+
+    .largeDevice {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .profile-details {
+        border-radius: 0 0 130px 130px;
+    }
+    
+    .profile-desc img{
+        width: 100px;
+        height: 100px
+    }
+
+    .recommention-section{
+        display: block;
+    }
+    
+}
+
+@media only screen and (max-width: 1200px){
+    .recommention-section{
+        display: none;
+    }
+
+}
+@media only screen and (max-width: 900px) {
+    .profile {
+        font-size: 21px;
+    }
+
+    .smallDevice {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .smallDevice .postImage {
+        height: 30vh;
+    }
+
+    .largeDevice {
+        display: none;
+    }
+
+    .profile-details {
+        border-radius: 0 0 110px 110px
+    }
+
+    .nav ul li a .icon {
+        font-size: 40px !important;
+    }
+
+    .nav {
+        border-radius: 0% !important;
+    }
+
+    .nav ul {
+        width: 100% !important
+    }
+
+    .navbar-brand {
+        font-size: 30px !important;
+    }
+
+    .profile-desc img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .result-body{
+        width:85vw !important
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .profile {
+        font-size: 16px;
+    }
+
+    .profile-details {
+        border-radius: 0 0 80px 80px
+    }
+
+    .smallDevice .postImage {
+        height: 20vh;
+    }
+
+    .post {
+        width: 90vw !important;
+        font-size: 14px !important;
+    }
+
+    .post .header {
+        font-size: 15px;
+    }
+
+    .nav {
+        border-radius: 0% !important;
+        height: 55px !important
+    }
+
+    .nav ul li a .icon {
+        font-size: 27px !important;
+    }
+
+    .nav ul {
+        width: 100% !important;
+        padding: 0px 5px
+    }
+
+    .navbar-brand {
+        font-size: 20px !important;
+    }
+
+    .profile-desc img{
+        width: 60px;
+        height: 60px;
+    }
+
+}

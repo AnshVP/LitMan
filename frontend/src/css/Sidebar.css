@@ -1,0 +1,73 @@
+.notification-section {
+    font-family: 'Dosis', sans-serif;
+    border-radius: 0px 40px;
+    box-shadow: 22px 32px 17px rgba(216, 15, 65, 0.4);
+    height: 100%;
+    width: 0;
+    z-index: 1;
+    top: 10%;
+    left: 0;
+    position: fixed;
+    background-color: rgba(71, 18, 120, 0.8);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+}
+
+.notification-section a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.notification-section a:hover {
+    color: #f1f1f1;
+}
+
+.notification-section .closebtn {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    border-radius: 5px 5px;
+    /* width:3%; */
+    position: fixed;
+    left:0%;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(7, 115, 52);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    border-radius: 20px 20px;
+    background-color: rgb(197, 20, 49);
+    transition: 0.5s;
+}
+
+#main {
+    position: absolute;
+    left: 0%;
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .notification-section {
+        padding-top: 15px;
+    }
+
+    .notification-section a {
+        font-size: 18px;
+    }
+}

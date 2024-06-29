@@ -1,0 +1,36 @@
+.post {
+  border: 1px solid #ccc;
+  background-color: white;
+  margin: 20px auto;
+  padding: 10px 20px;
+  padding-top: 20px;
+  box-shadow: 32px 32px 17px rgba(0, 0, 0, 0.2);
+  font-family: 'Dosis', sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-details {
+  margin-left: 10px;
+}
+
+.user-details .timestamp {
+  color: #888;
+}
+
+.user-details .location {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #234eba;
+}
+
+.interaction-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}

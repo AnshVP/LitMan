@@ -1,0 +1,148 @@
+body,
+html {
+    margin: 0;
+    /* height: 100vh; */
+    background: url("../img/img1.jpg");
+    background-size: cover;
+    object-fit: cover;
+}
+
+.circle,
+.square,
+.rectangle {
+    z-index: 0;
+    position: fixed;
+    width: 20vh;
+    height: 20vh;
+    opacity: 0.7;
+    box-shadow: 0 0 35px rgb(12, 33, 103)
+}
+
+.circle {
+    background-color: #ff6b6b;
+    /* Circle color */
+    border-radius: 50%;
+    animation: rotateCircle 8s linear infinite, moveCircle 10s linear infinite;
+}
+
+.square {
+    background-color: #6bff6b;
+    /* Square color */
+    animation: rotateSquare 12s linear infinite, moveSquare 8s linear infinite;
+}
+
+.rectangle {
+    width: 20vh;
+    height: 10vh;
+    border-bottom: 50px solid #6b6bff;
+    /* rectangle color */
+    animation: rotaterectangle 10s linear infinite, moverectangle 12s linear infinite;
+}
+
+@keyframes moveCircle {
+
+    0%,
+    100% {
+        top: 50%;
+        left: 0;
+    }
+
+    25% {
+        top: 0;
+        left: 75%;
+    }
+
+    50% {
+        top: 75%;
+        left: 50%;
+    }
+
+    75% {
+        top: 25%;
+        left: 25%;
+    }
+}
+
+@keyframes moveSquare {
+
+    0%,
+    100% {
+        top: 0;
+        left: 50vh;
+    }
+
+    25% {
+        top: 75vh;
+        left: 75vh;
+    }
+
+    50% {
+        top: 50vh;
+        left: 25vh;
+    }
+
+    75% {
+        top: 25vh;
+        left: 75vh;
+    }
+}
+
+@keyframes moverectangle {
+
+    0%,
+    100% {
+        top: 75%;
+        left: 25%;
+    }
+
+    25% {
+        top: 50%;
+        left: 75%;
+    }
+
+    50% {
+        top: 25%;
+        left: 50%;
+    }
+
+    75% {
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes rotateCircle {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateSquare {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotaterectangle {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+}
