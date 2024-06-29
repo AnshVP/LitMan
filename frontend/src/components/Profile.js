@@ -71,7 +71,7 @@ export const Profile = () => {
       getUser();
       const fetchreports = async () => {
         const response = await fetch(
-          "http://localhost:8000/api/post/fetchallreports",
+          "http://localhost:8000/api/post/feeetchallreports",
           {
             method: "GET",
             headers: {
@@ -121,7 +121,7 @@ export const Profile = () => {
                 }}
               />
               <strong className="mx-auto" style={{ display: "block" }}>
-                {userData.name}
+                {userData?.name}
               </strong>
             </label>
           </div>
@@ -154,7 +154,7 @@ export const Profile = () => {
           </div>
           <div className="largeDevice justify-content-center">
             {allReports.map((data) => {
-              let liked = data.severity.filter((id) => id === userData._id);
+              let liked = (data.severity || []).filter((id) => id === userData._id);
               return (
                 <div key={data._id}>
                   <div
@@ -174,13 +174,13 @@ export const Profile = () => {
                       imageHeight="220px"
                       heart={liked}
                       likedBy={
-                        data.severity.length !== 0
-                          ? data.severity.length === 1
-                            ? [data.severity[0].name]
-                            : [data.severity[0].name, data.severity[1].name]
+                        (data.severity || []).length !== 0
+                          ? (data.severity || []).length === 1
+                            ? [data.severity[0]?.name]
+                            : [data.severity[0]?.name, data.severity[1]?.name]
                           : []
                       }
-                      profilePic={data.postedBy.profilePic}
+                      profilePic={data.postedBy?.profilePic}
                     />
                   </div>
 
@@ -208,13 +208,13 @@ export const Profile = () => {
                         imageHeight="57vh"
                         heart={liked}
                         likedBy={
-                          data.severity.length !== 0
-                            ? data.severity.length === 1
-                              ? [data.severity[0].name]
-                              : [data.severity[0].name, data.severity[1].name]
+                          (data.severity || []).length !== 0
+                            ? (data.severity || []).length === 1
+                              ? [data.severity[0]?.name]
+                              : [data.severity[0]?.name, data.severity[1]?.name]
                             : []
                         }
-                        profilePic={data.postedBy.profilePic}
+                        profilePic={data.postedBy?.profilePic}
                       />
                     </div>
                     <div style={{ margin: "27vh 0" }}>
@@ -245,7 +245,7 @@ export const Profile = () => {
           </div>
           <div className="smallDevice">
             {allReports.map((data) => {
-              let liked = data.severity.filter((id) => id === userData._id);
+              let liked = data.severity || [].filter((id) => id === userData._id);
               return (
                 <div key={data._id} className="mx-auto my-1">
                   <div
@@ -313,13 +313,13 @@ export const Profile = () => {
                           imageHeight="45vh"
                           heart={liked}
                           likedBy={
-                            data.severity.length !== 0
-                              ? data.severity.length === 1
-                                ? [data.severity[0].name]
-                                : [data.severity[0].name, data.severity[1].name]
+                            (data.severity || []).length !== 0
+                              ? data.severity || [].length === 1
+                                ? [data.severity[0]?.name]
+                                : [data.severity[0]?.name, data.severity[1]?.name]
                               : []
                           }
-                          profilePic={data.postedBy.profilePic}
+                          profilePic={data.postedBy?.profilePic}
                         />
                       </div>
                     </div>
